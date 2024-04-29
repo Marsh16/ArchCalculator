@@ -23,5 +23,7 @@ class Colors {
     static let primaryColor = Color(hex: "#FFC165")
     static let secondaryColor = Color(hex: "#C0842A")
     static let tertiaryColor = Color(hex: "#AD6800")
+    static let greyColor = Color(hex: "#2F2F2F")
+    static let blurColor = Color(hex: "#D9D9D9")
 }
 

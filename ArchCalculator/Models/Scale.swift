@@ -1,13 +1,13 @@
 //
-//  Foundation.swift
+//  Scale.swift
 //  ArchCalculator
 //
-//  Created by Marsha Likorawung on 26/04/24.
+//  Created by Marsha Likorawung on 29/04/24.
 //
 
 import Foundation
 
-struct Foundations: Codable{
+struct Scale: Codable{
     var columnType:String
     var length:Double
     var width:Double

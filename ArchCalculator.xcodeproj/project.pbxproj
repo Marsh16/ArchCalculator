@@ -10,10 +10,14 @@
 		060384662BD7E56900BD3D5A /* ArchCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060384652BD7E56900BD3D5A /* ArchCalculatorApp.swift */; };
 		0603846C2BD7E56A00BD3D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0603846B2BD7E56A00BD3D5A /* Assets.xcassets */; };
 		0603846F2BD7E56A00BD3D5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0603846E2BD7E56A00BD3D5A /* Preview Assets.xcassets */; };
+		060A39B32BDF2F3D00121B19 /* StructurePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39B22BDF2F3D00121B19 /* StructurePlan.swift */; };
+		060A39B52BDF34D800121B19 /* Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39B42BDF34D800121B19 /* Blocks.swift */; };
+		060A39B72BDF34EB00121B19 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39B62BDF34EB00121B19 /* Scale.swift */; };
+		060A39BC2BDF384D00121B19 /* StructurePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39BB2BDF384D00121B19 /* StructurePlanViewModel.swift */; };
+		060A39BE2BDF39CF00121B19 /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39BD2BDF39CF00121B19 /* CalculateView.swift */; };
+		060A39C02BDF3A3000121B19 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39BF2BDF3A3000121B19 /* CalculateViewModel.swift */; };
 		063C9CD72BD894EC0059A109 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9CD62BD894EC0059A109 /* Colors.swift */; };
 		06A988CF2BDB53A8004BBE37 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988CB2BDB53A8004BBE37 /* SplashView.swift */; };
-		06A988D02BDB53A8004BBE37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988CC2BDB53A8004BBE37 /* ContentView.swift */; };
-		06A988D12BDB53A8004BBE37 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988CD2BDB53A8004BBE37 /* Item.swift */; };
 		06A988D22BDB53A8004BBE37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988CE2BDB53A8004BBE37 /* HomeView.swift */; };
 		06A988D42BDB542C004BBE37 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D32BDB542C004BBE37 /* Column.swift */; };
 		06A988D62BDB819F004BBE37 /* Roof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D52BDB819F004BBE37 /* Roof.swift */; };
@@ -25,10 +29,14 @@
 		060384652BD7E56900BD3D5A /* ArchCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorApp.swift; sourceTree = "<group>"; };
 		0603846B2BD7E56A00BD3D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0603846E2BD7E56A00BD3D5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		060A39B22BDF2F3D00121B19 /* StructurePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePlan.swift; sourceTree = "<group>"; };
+		060A39B42BDF34D800121B19 /* Blocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocks.swift; sourceTree = "<group>"; };
+		060A39B62BDF34EB00121B19 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		060A39BB2BDF384D00121B19 /* StructurePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePlanViewModel.swift; sourceTree = "<group>"; };
+		060A39BD2BDF39CF00121B19 /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
+		060A39BF2BDF3A3000121B19 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
 		063C9CD62BD894EC0059A109 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		06A988CB2BDB53A8004BBE37 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../../../../../.Trash/SplashView.swift; sourceTree = "<group>"; };
-		06A988CC2BDB53A8004BBE37 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../../.Trash/ContentView.swift; sourceTree = "<group>"; };
-		06A988CD2BDB53A8004BBE37 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../../../.Trash/Item.swift; sourceTree = "<group>"; };
 		06A988CE2BDB53A8004BBE37 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../.Trash/HomeView.swift; sourceTree = "<group>"; };
 		06A988D32BDB542C004BBE37 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		06A988D52BDB819F004BBE37 /* Roof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roof.swift; sourceTree = "<group>"; };
@@ -65,13 +73,13 @@
 		060384642BD7E56900BD3D5A /* ArchCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				060A39B82BDF369400121B19 /* Helper */,
 				06A988CA2BDB5389004BBE37 /* Views */,
 				06A988C02BDB5367004BBE37 /* ViewModels */,
 				06A988BF2BDB5361004BBE37 /* Models */,
 				060384652BD7E56900BD3D5A /* ArchCalculatorApp.swift */,
 				0603846B2BD7E56A00BD3D5A /* Assets.xcassets */,
 				0603846D2BD7E56A00BD3D5A /* Preview Content */,
-				063C9CD62BD894EC0059A109 /* Colors.swift */,
 			);
 			path = ArchCalculator;
 			sourceTree = "<group>";
@@ -84,12 +92,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		060A39B82BDF369400121B19 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				063C9CD62BD894EC0059A109 /* Colors.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		06A988BF2BDB5361004BBE37 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				06A988D32BDB542C004BBE37 /* Column.swift */,
 				06A988D52BDB819F004BBE37 /* Roof.swift */,
 				06A988D72BDB8691004BBE37 /* Foundation.swift */,
+				060A39B22BDF2F3D00121B19 /* StructurePlan.swift */,
+				060A39B42BDF34D800121B19 /* Blocks.swift */,
+				060A39B62BDF34EB00121B19 /* Scale.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -97,6 +116,8 @@
 		06A988C02BDB5367004BBE37 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				060A39BB2BDF384D00121B19 /* StructurePlanViewModel.swift */,
+				060A39BF2BDF3A3000121B19 /* CalculateViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -104,10 +125,9 @@
 		06A988CA2BDB5389004BBE37 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				06A988CC2BDB53A8004BBE37 /* ContentView.swift */,
 				06A988CE2BDB53A8004BBE37 /* HomeView.swift */,
-				06A988CD2BDB53A8004BBE37 /* Item.swift */,
 				06A988CB2BDB53A8004BBE37 /* SplashView.swift */,
+				060A39BD2BDF39CF00121B19 /* CalculateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,14 +202,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060A39BE2BDF39CF00121B19 /* CalculateView.swift in Sources */,
 				06A988D82BDB8691004BBE37 /* Foundation.swift in Sources */,
-				06A988D12BDB53A8004BBE37 /* Item.swift in Sources */,
 				063C9CD72BD894EC0059A109 /* Colors.swift in Sources */,
 				06A988D22BDB53A8004BBE37 /* HomeView.swift in Sources */,
+				060A39BC2BDF384D00121B19 /* StructurePlanViewModel.swift in Sources */,
+				060A39B32BDF2F3D00121B19 /* StructurePlan.swift in Sources */,
 				06A988D62BDB819F004BBE37 /* Roof.swift in Sources */,
+				060A39B52BDF34D800121B19 /* Blocks.swift in Sources */,
 				06A988D42BDB542C004BBE37 /* Column.swift in Sources */,
-				06A988D02BDB53A8004BBE37 /* ContentView.swift in Sources */,
 				060384662BD7E56900BD3D5A /* ArchCalculatorApp.swift in Sources */,
+				060A39C02BDF3A3000121B19 /* CalculateViewModel.swift in Sources */,
+				060A39B72BDF34EB00121B19 /* Scale.swift in Sources */,
 				06A988CF2BDB53A8004BBE37 /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
