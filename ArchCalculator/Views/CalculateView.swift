@@ -63,22 +63,22 @@ struct CalculateView: View {
                             HStack{
                                 Text(columnParameter[0])
                                 TextField(columnParameter[0] + " in m", text:$columnCount[0]
-                                ).multilineTextAlignment(.trailing)
+                                ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
                             }
                             HStack{
                                 Text(columnParameter[1])
                                 TextField(columnParameter[1] + " in m", text:$columnCount[1]
-                                ).multilineTextAlignment(.trailing)
+                                ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
                             }
                             HStack{
                                 Text(columnParameter[2])
                                 TextField(columnParameter[2] + " in m", text:$columnCount[2]
-                                ).multilineTextAlignment(.trailing)
+                                ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
                             }
                             HStack{
                                 Text(columnParameter[3])
                                 TextField(columnParameter[3] + " in cm", text:$columnCount[3]
-                                ).multilineTextAlignment(.trailing)
+                                ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
                             }
                         }
                         
@@ -91,9 +91,10 @@ struct CalculateView: View {
                         }.multilineTextAlignment(.center).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     }else{
                         Button(action: {
-                            columnCount = ["","","",""]
-                            selection = "Tied Column"
-                            result = calculateViewModel.calculateColumn(column: Column(type: "", length: 0.0, width: 0.0, height: 0.0, begel: 0.0))
+                            result = calculateViewModel.calculateColumn(column: Column(type: selection, length:Double(columnCount[0]) ?? 0.0, width: Double(columnCount[1]) ?? 0.0, height: Double(columnCount[2]) ?? 0.0, begel: Double(columnCount[3]) ?? 0.0))
+//                            columnCount = ["","","",""]
+//                            selection = "Tied Column"
+//                            result = calculateViewModel.calculateColumn(column: Column(type: "", length: 0.0, width: 0.0, height: 0.0, begel: 0.0))
                             
                         }){
                             HStack{
