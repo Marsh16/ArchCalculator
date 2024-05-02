@@ -121,14 +121,14 @@ struct CalculateView: View {
                             List{
                                 ForEach(result) { result in
                                     HStack{
-                                        Text(result.name).fontWeight(.regular).font(.subheadline).foregroundColor(Colors.greyColor)
+                                        Text(result.name).fontWeight(.regular).font(.subheadline)
                                             .frame(maxWidth: .infinity, alignment: .topLeading)
                                         Text(result.value + " " + result.unit).fontWeight(.bold).font(.subheadline)
                                             .multilineTextAlignment(.trailing)
                                     }
                                 }
                             }
-                            Image("ArchMountain").resizable().padding().frame(width: .infinity).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
+//                            Image("ArchMountain").resizable().padding().frame(width: .infinity).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
                         }header: {
                             Text("Result")
                         }
