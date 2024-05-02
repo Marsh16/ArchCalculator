@@ -64,21 +64,33 @@ struct CalculateView: View {
                                 Text(columnParameter[0])
                                 TextField(columnParameter[0] + " in m", text:$columnCount[0]
                                 ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
+                                if(!columnCount[0].isEmpty){
+                                    Text("m")
+                                }
                             }
                             HStack{
                                 Text(columnParameter[1])
                                 TextField(columnParameter[1] + " in m", text:$columnCount[1]
                                 ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
+                                if(!columnCount[1].isEmpty){
+                                    Text("m")
+                                }
                             }
                             HStack{
                                 Text(columnParameter[2])
                                 TextField(columnParameter[2] + " in m", text:$columnCount[2]
                                 ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
+                                if(!columnCount[2].isEmpty){
+                                    Text("m")
+                                }
                             }
                             HStack{
                                 Text(columnParameter[3])
                                 TextField(columnParameter[3] + " in cm", text:$columnCount[3]
                                 ).multilineTextAlignment(.trailing).keyboardType(.numberPad)
+                                if(!columnCount[3].isEmpty){
+                                    Text("cm")
+                                }
                             }
                         }
                         

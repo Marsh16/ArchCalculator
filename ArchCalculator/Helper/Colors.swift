@@ -27,4 +27,3 @@ class Colors {
     static let blurColor = Color(hex: "#D9D9D9")
     static let systemGray = Color(hex: "#F2F2F6")
 }
-

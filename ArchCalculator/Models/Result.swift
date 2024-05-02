@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Result model
 struct Result: Identifiable,Codable{
     var id: UUID
     var name:String
