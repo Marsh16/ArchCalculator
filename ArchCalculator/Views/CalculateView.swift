@@ -12,7 +12,7 @@ struct CalculateView: View {
     @State var chosenStructure : StructurePlan
     @EnvironmentObject var calculateViewModel: CalculateViewModel
     @State var columnCount:[String] = ["","","",""]
-    @State var column:Column = Column(type: "", length: 0.0, width: 0.0, heigth: 0.0, begel: 0.0)
+    @State var column:Column = Column(type: "", length: 0.0, width: 0.0, height: 0.0, begel: 0.0)
     @State var result:[Result] = []
     @State var selection: String = ""
     @State var columnType:[String] = ["Tied Column","Spiral Column", "Practical Column"]
@@ -72,31 +72,31 @@ struct CalculateView: View {
                         if(chosenStructure.structureName == "Column") {
                             HStack{
                                 Text(columnParameter[0])
-                                TextField(columnParameter[0], text:$columnCount[0]
+                                TextField(columnParameter[0] + " in m", text:$columnCount[0]
                                 ).multilineTextAlignment(.trailing)
                             }.padding(.trailing)
                             Divider()
                             HStack{
                                 Text(columnParameter[1])
-                                TextField(columnParameter[1], text:$columnCount[1]
+                                TextField(columnParameter[1] + " in m", text:$columnCount[1]
                                 ).multilineTextAlignment(.trailing)
                             }.padding(.trailing)
                             Divider()
                             HStack{
                                 Text(columnParameter[2])
-                                TextField(columnParameter[2], text:$columnCount[2]
+                                TextField(columnParameter[2] + " in m", text:$columnCount[2]
                                 ).multilineTextAlignment(.trailing)
                             }.padding(.trailing)
                             Divider()
                             HStack{
                                 Text(columnParameter[3])
-                                TextField(columnParameter[3] + "in cm", text:$columnCount[3]
+                                TextField(columnParameter[3] + " in cm", text:$columnCount[3]
                                 ).multilineTextAlignment(.trailing)
                             }.padding(.trailing)
                             Divider()
                         }
                         Button("Calculate"){
-                            result = calculateViewModel.calculateColumn(column: Column(type: selection, length:Double(columnCount[0]) ?? 0.0, width: Double(columnCount[1]) ?? 0.0, heigth: Double(columnCount[2]) ?? 0.0, begel: Double(columnCount[3]) ?? 0.0))
+                            result = calculateViewModel.calculateColumn(column: Column(type: selection, length:Double(columnCount[0]) ?? 0.0, width: Double(columnCount[1]) ?? 0.0, height: Double(columnCount[2]) ?? 0.0, begel: Double(columnCount[3]) ?? 0.0))
                         }.padding().foregroundColor(Colors.tertiaryColor).bold()
                         ForEach(result) { result in
                             HStack{

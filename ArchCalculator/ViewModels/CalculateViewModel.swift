@@ -17,7 +17,7 @@ class CalculateViewModel: ObservableObject {
     func calculateColumn(column: Column)->[Result]{
         var results : [Result] = []
         if(column.type == "Practical Column"){
-            let volume = column.length * column.width * column.heigth
+            let volume = column.length * column.width * column.height
             let begels = (column.length*100)/column.begel
             let reinforcingIron = (column.length)*4
             let result1 = Result(name: "Volume", value: "\(Int(volume))", unit: "m³")
