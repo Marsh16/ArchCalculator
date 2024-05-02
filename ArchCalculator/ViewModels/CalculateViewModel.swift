@@ -23,9 +23,7 @@ class CalculateViewModel: ObservableObject {
             let result1 = Result(name: "Volume", value: "\(Int(volume))", unit: "m³")
             let result2 = Result(name: "Number of Begels", value: "\(Int(begels))", unit: "pieces")
             let result3 = Result(name: "Reinforcing iron", value: "\(Int(reinforcingIron))", unit: "m")
-            results.append(result1)
-            results.append(result2)
-            results.append(result3)
+            results = [result1, result2, result3]
         }
         return results
     }

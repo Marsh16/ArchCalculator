@@ -16,7 +16,7 @@ struct CalculateView: View {
     @State var result:[Result] = []
     @State var selection: String = ""
     @State var columnType:[String] = ["Tied Column","Spiral Column", "Practical Column"]
-    @State var columnParameter:[String] = ["Length","Width", "Heigth", "Begel"]
+    @State var columnParameter:[String] = ["Length","Width", "Height", "Begel"]
     @State var foundationType:[String] = ["Raft Foundation","Spiral Column", "Composite Column"]
     @State var blocksType:[String] = ["Tied Blocks","Spiral Column", "Composite Column"]
     @State var scaleType:[String] = ["Tied Scale","Spiral Column", "Composite Column"]
