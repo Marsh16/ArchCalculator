@@ -25,5 +25,6 @@ class Colors {
     static let tertiaryColor = Color(hex: "#AD6800")
     static let greyColor = Color(hex: "#2F2F2F")
     static let blurColor = Color(hex: "#D9D9D9")
+    static let systemGray = Color(hex: "#F2F2F6")
 }
 

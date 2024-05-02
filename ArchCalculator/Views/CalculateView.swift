@@ -22,99 +22,109 @@ struct CalculateView: View {
     @State var scaleType:[String] = ["Tied Scale","Spiral Column", "Composite Column"]
     @State var roofType:[String] = ["Tied Roof","Spiral Column", "Composite Column"]
     var body: some View {
-        NavigationStack{
-            ScrollView {
-                VStack{
-                    Spacer().navigationBarBackButtonHidden(true).navigationBarTitleDisplayMode(.inline).navigationTitle(chosenStructure.structureName).toolbar(content: {
-                        ToolbarItem(placement: .topBarLeading){
-                            Button(action:{ presentationMode.wrappedValue.dismiss()}, label: {
-                                Image(systemName: "chevron.backward").foregroundColor(Colors.tertiaryColor).font(.system(size: 16, weight: .semibold))
-                            })
+        NavigationStack {
+            VStack{
+                Spacer().navigationBarTitleDisplayMode(.inline).navigationTitle(chosenStructure.structureName)
+                Form {
+                    Section{
+                        if(chosenStructure.structureName == "Column") {
+                            Picker("Column Type", selection: $selection){
+                                ForEach(columnType, id: \.self) {
+                                    Text($0)
+                                }
+                            }.multilineTextAlignment(.trailing)
+                        } else if(chosenStructure.structureName == "Foundation") {
+                            Picker("Foundation Type", selection: $selection){
+                                ForEach(foundationType, id: \.self) {
+                                    Text($0)
+                                }
+                            }.multilineTextAlignment(.trailing)
+                        }else if(chosenStructure.structureName == "Blocks") {
+                            Picker("Blocks Type", selection: $selection){
+                                ForEach(blocksType, id: \.self) {
+                                    Text($0)
+                                }
+                            }.multilineTextAlignment(.trailing)
+                        }else if(chosenStructure.structureName == "Scale") {
+                            Picker("Scale Type", selection: $selection){
+                                ForEach(scaleType, id: \.self) {
+                                    Text($0)
+                                }
+                            }.multilineTextAlignment(.trailing)
+                        }else {
+                            Picker("Roof Type", selection: $selection){
+                                ForEach(roofType, id: \.self) {
+                                    Text($0).tag($0)
+                                }
+                            }.multilineTextAlignment(.trailing)
                         }
-                    })
-                    VStack{
-                        HStack{
-                            Text("Column Type")
-                            Spacer()
-                            if(chosenStructure.structureName == "Column") {
-                                Picker("Column Type", selection: $selection){
-                                    ForEach(columnType, id: \.self) {
-                                        Text($0)
-                                    }
-                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
-                            } else if(chosenStructure.structureName == "Foundation") {
-                                Picker("Foundation Type", selection: $selection){
-                                    ForEach(foundationType, id: \.self) {
-                                        Text($0)
-                                    }
-                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
-                            }else if(chosenStructure.structureName == "Blocks") {
-                                Picker("Blocks Type", selection: $selection){
-                                    ForEach(blocksType, id: \.self) {
-                                        Text($0)
-                                    }
-                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
-                            }else if(chosenStructure.structureName == "Scale") {
-                                Picker("Scale Type", selection: $selection){
-                                    ForEach(scaleType, id: \.self) {
-                                        Text($0)
-                                    }
-                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
-                            }else {
-                                Picker("Roof Type", selection: $selection){
-                                    ForEach(roofType, id: \.self) {
-                                        Text($0).tag($0)
-                                    }
-                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
-                            }
-                        }
-                        Divider()
+                        
                         if(chosenStructure.structureName == "Column") {
                             HStack{
                                 Text(columnParameter[0])
                                 TextField(columnParameter[0] + " in m", text:$columnCount[0]
                                 ).multilineTextAlignment(.trailing)
-                            }.padding(.trailing)
-                            Divider()
+                            }
                             HStack{
                                 Text(columnParameter[1])
                                 TextField(columnParameter[1] + " in m", text:$columnCount[1]
                                 ).multilineTextAlignment(.trailing)
-                            }.padding(.trailing)
-                            Divider()
+                            }
                             HStack{
                                 Text(columnParameter[2])
                                 TextField(columnParameter[2] + " in m", text:$columnCount[2]
                                 ).multilineTextAlignment(.trailing)
-                            }.padding(.trailing)
-                            Divider()
+                            }
                             HStack{
                                 Text(columnParameter[3])
                                 TextField(columnParameter[3] + " in cm", text:$columnCount[3]
                                 ).multilineTextAlignment(.trailing)
-                            }.padding(.trailing)
-                            Divider()
+                            }
                         }
+                        
+                    }header: {
+                        Text("Input")
+                    }
+                    if (result.isEmpty){
                         Button("Calculate"){
                             result = calculateViewModel.calculateColumn(column: Column(type: selection, length:Double(columnCount[0]) ?? 0.0, width: Double(columnCount[1]) ?? 0.0, height: Double(columnCount[2]) ?? 0.0, begel: Double(columnCount[3]) ?? 0.0))
-                        }.padding().foregroundColor(Colors.tertiaryColor).bold()
-                        ForEach(result) { result in
+                        }.multilineTextAlignment(.center).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    }else{
+                        Button(action: {
+                            columnCount = ["","","",""]
+                            selection = "Tied Column"
+                            result = calculateViewModel.calculateColumn(column: Column(type: "", length: 0.0, width: 0.0, height: 0.0, begel: 0.0))
+                            
+                        }){
                             HStack{
-                                Text(result.name).fontWeight(.bold).font(.subheadline).foregroundColor(Colors.greyColor)
-                                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                                Text(result.value + " " + result.unit).fontWeight(.regular).font(.footnote)
-                                    .multilineTextAlignment(.trailing)
-                            }.padding().frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
-                                .shadow(color: Colors.blurColor, radius: 8).padding(.vertical,2)
+                                Image(systemName: "arrow.circlepath")
+                                Text("Recalculate")
+                            }
+                        }.multilineTextAlignment(.center).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
+                    }
+                   
+                    if(!result.isEmpty){
+                        Section{
+                            List{
+                                ForEach(result) { result in
+                                    HStack{
+                                        Text(result.name).fontWeight(.regular).font(.subheadline).foregroundColor(Colors.greyColor)
+                                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                                        Text(result.value + " " + result.unit).fontWeight(.bold).font(.subheadline)
+                                            .multilineTextAlignment(.trailing)
+                                    }
+                                }
+                            }
+                            Image("ArchMountain").resizable().padding().frame(width: .infinity).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
+                        }header: {
+                            Text("Result")
                         }
-                        Image("ArchMountain").resizable().padding().frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: Colors.blurColor, radius: 8).padding(.vertical,2)
-                    }.padding()
+                    }
                 }
             }
         }
-    }
-}
+    }            }
+
 
 #Preview {
     CalculateView(chosenStructure: StructurePlan.structurePlanList[0])
