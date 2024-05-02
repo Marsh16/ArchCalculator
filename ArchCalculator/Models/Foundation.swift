@@ -8,12 +8,12 @@
 import Foundation
 
 struct Foundations: Codable{
-    var columnType:String
+    var type:String
     var length:Double
     var width:Double
     
-    init(columnType: String, length: Double, width: Double) {
-        self.columnType = columnType
+    init(type: String, length: Double, width: Double) {
+        self.type = type
         self.length = length
         self.width = width
     }

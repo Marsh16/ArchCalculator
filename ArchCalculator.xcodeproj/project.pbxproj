@@ -16,6 +16,7 @@
 		060A39BC2BDF384D00121B19 /* StructurePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39BB2BDF384D00121B19 /* StructurePlanViewModel.swift */; };
 		060A39BE2BDF39CF00121B19 /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39BD2BDF39CF00121B19 /* CalculateView.swift */; };
 		060A39C02BDF3A3000121B19 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39BF2BDF3A3000121B19 /* CalculateViewModel.swift */; };
+		060A39C62BE099B500121B19 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39C52BE099B500121B19 /* Result.swift */; };
 		063C9CD72BD894EC0059A109 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9CD62BD894EC0059A109 /* Colors.swift */; };
 		06A988CF2BDB53A8004BBE37 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988CB2BDB53A8004BBE37 /* SplashView.swift */; };
 		06A988D22BDB53A8004BBE37 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988CE2BDB53A8004BBE37 /* HomeView.swift */; };
@@ -35,6 +36,7 @@
 		060A39BB2BDF384D00121B19 /* StructurePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePlanViewModel.swift; sourceTree = "<group>"; };
 		060A39BD2BDF39CF00121B19 /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
 		060A39BF2BDF3A3000121B19 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		060A39C52BE099B500121B19 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		063C9CD62BD894EC0059A109 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		06A988CB2BDB53A8004BBE37 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashView.swift; path = ../../../../../.Trash/SplashView.swift; sourceTree = "<group>"; };
 		06A988CE2BDB53A8004BBE37 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../.Trash/HomeView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				060A39B22BDF2F3D00121B19 /* StructurePlan.swift */,
 				060A39B42BDF34D800121B19 /* Blocks.swift */,
 				060A39B62BDF34EB00121B19 /* Scale.swift */,
+				060A39C52BE099B500121B19 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				06A988D82BDB8691004BBE37 /* Foundation.swift in Sources */,
 				063C9CD72BD894EC0059A109 /* Colors.swift in Sources */,
 				06A988D22BDB53A8004BBE37 /* HomeView.swift in Sources */,
+				060A39C62BE099B500121B19 /* Result.swift in Sources */,
 				060A39BC2BDF384D00121B19 /* StructurePlanViewModel.swift in Sources */,
 				060A39B32BDF2F3D00121B19 /* StructurePlan.swift in Sources */,
 				06A988D62BDB819F004BBE37 /* Roof.swift in Sources */,

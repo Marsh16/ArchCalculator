@@ -11,63 +11,107 @@ struct CalculateView: View {
     @Environment (\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @State var chosenStructure : StructurePlan
     @EnvironmentObject var calculateViewModel: CalculateViewModel
-    @State var category:Int = 0
-    @State var length:String = ""
-    @State var width:String = ""
+    @State var columnCount:[String] = ["","","",""]
+    @State var column:Column = Column(type: "", length: 0.0, width: 0.0, heigth: 0.0, begel: 0.0)
+    @State var result:[Result] = []
+    @State var selection: String = ""
+    @State var columnType:[String] = ["Tied Column","Spiral Column", "Practical Column"]
+    @State var columnParameter:[String] = ["Length","Width", "Heigth", "Begel"]
+    @State var foundationType:[String] = ["Raft Foundation","Spiral Column", "Composite Column"]
+    @State var blocksType:[String] = ["Tied Blocks","Spiral Column", "Composite Column"]
+    @State var scaleType:[String] = ["Tied Scale","Spiral Column", "Composite Column"]
+    @State var roofType:[String] = ["Tied Roof","Spiral Column", "Composite Column"]
     var body: some View {
         NavigationStack{
-            VStack{
-                Spacer().navigationBarBackButtonHidden(true).navigationBarTitleDisplayMode(.inline).navigationTitle(chosenStructure.structureName).toolbar(content: {
-                    ToolbarItem(placement: .topBarLeading){
-                        Button(action:{ presentationMode.wrappedValue.dismiss()}, label: {
-                            Image(systemName: "chevron.backward").foregroundColor(Colors.tertiaryColor).font(.system(size: 16, weight: .semibold))
-                        })
-                    }
-                })
+            ScrollView {
                 VStack{
+                    Spacer().navigationBarBackButtonHidden(true).navigationBarTitleDisplayMode(.inline).navigationTitle(chosenStructure.structureName).toolbar(content: {
+                        ToolbarItem(placement: .topBarLeading){
+                            Button(action:{ presentationMode.wrappedValue.dismiss()}, label: {
+                                Image(systemName: "chevron.backward").foregroundColor(Colors.tertiaryColor).font(.system(size: 16, weight: .semibold))
+                            })
+                        }
+                    })
+                    VStack{
                         HStack{
                             Text("Column Type")
                             Spacer()
-                            Picker("Column Type", selection: $category){
-                                Text("Practical Column").tag(0)
-                                Text("a Column").tag(1)
-                                Text("b Column").tag(2)
-                            }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
+                            if(chosenStructure.structureName == "Column") {
+                                Picker("Column Type", selection: $selection){
+                                    ForEach(columnType, id: \.self) {
+                                        Text($0)
+                                    }
+                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
+                            } else if(chosenStructure.structureName == "Foundation") {
+                                Picker("Foundation Type", selection: $selection){
+                                    ForEach(foundationType, id: \.self) {
+                                        Text($0)
+                                    }
+                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
+                            }else if(chosenStructure.structureName == "Blocks") {
+                                Picker("Blocks Type", selection: $selection){
+                                    ForEach(blocksType, id: \.self) {
+                                        Text($0)
+                                    }
+                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
+                            }else if(chosenStructure.structureName == "Scale") {
+                                Picker("Scale Type", selection: $selection){
+                                    ForEach(scaleType, id: \.self) {
+                                        Text($0)
+                                    }
+                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
+                            }else {
+                                Picker("Roof Type", selection: $selection){
+                                    ForEach(roofType, id: \.self) {
+                                        Text($0).tag($0)
+                                    }
+                                }.multilineTextAlignment(.trailing).accentColor(Colors.tertiaryColor)
+                            }
                         }
                         Divider()
-                        HStack{
-                            Text("Length")
-                            TextField("Length", text: $length).multilineTextAlignment(.trailing)
-                        }.padding(.trailing)
-                        Divider()
-                        HStack{
-                            Text("Width")
-                            TextField("Width", text: $width).multilineTextAlignment(.trailing)
-                        }.padding(.trailing)
-                        Divider()
-                        
+                        if(chosenStructure.structureName == "Column") {
+                            HStack{
+                                Text(columnParameter[0])
+                                TextField(columnParameter[0], text:$columnCount[0]
+                                ).multilineTextAlignment(.trailing)
+                            }.padding(.trailing)
+                            Divider()
+                            HStack{
+                                Text(columnParameter[1])
+                                TextField(columnParameter[1], text:$columnCount[1]
+                                ).multilineTextAlignment(.trailing)
+                            }.padding(.trailing)
+                            Divider()
+                            HStack{
+                                Text(columnParameter[2])
+                                TextField(columnParameter[2], text:$columnCount[2]
+                                ).multilineTextAlignment(.trailing)
+                            }.padding(.trailing)
+                            Divider()
+                            HStack{
+                                Text(columnParameter[3])
+                                TextField(columnParameter[3] + "in cm", text:$columnCount[3]
+                                ).multilineTextAlignment(.trailing)
+                            }.padding(.trailing)
+                            Divider()
+                        }
                         Button("Calculate"){
-                            
+                            result = calculateViewModel.calculateColumn(column: Column(type: selection, length:Double(columnCount[0]) ?? 0.0, width: Double(columnCount[1]) ?? 0.0, heigth: Double(columnCount[2]) ?? 0.0, begel: Double(columnCount[3]) ?? 0.0))
                         }.padding().foregroundColor(Colors.tertiaryColor).bold()
-                        HStack{
-                            Text("Steel Beams").fontWeight(.bold).font(.subheadline).foregroundColor(Colors.greyColor)
-                                .frame(maxWidth: .infinity, alignment: .topLeading)
-                            Text("15 Pieces").fontWeight(.regular).font(.footnote)
-                                .multilineTextAlignment(.trailing)
-                        }.padding().frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: Colors.blurColor, radius: 8).padding(.vertical,2)
-                        HStack{
-                            Text("Steel Beams").fontWeight(.bold).font(.subheadline).foregroundColor(Colors.greyColor)
-                                .frame(maxWidth: .infinity, alignment: .topLeading)
-                            Text("15 Pieces").fontWeight(.regular).font(.footnote)
-                                .multilineTextAlignment(.trailing)
-                        }.padding().frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
-                            .shadow(color: Colors.blurColor, radius: 8).padding(.vertical,2)
+                        ForEach(result) { result in
+                            HStack{
+                                Text(result.name).fontWeight(.bold).font(.subheadline).foregroundColor(Colors.greyColor)
+                                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                                Text(result.value + " " + result.unit).fontWeight(.regular).font(.footnote)
+                                    .multilineTextAlignment(.trailing)
+                            }.padding().frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
+                                .shadow(color: Colors.blurColor, radius: 8).padding(.vertical,2)
+                        }
                         Image("ArchMountain").resizable().padding().frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
                             .shadow(color: Colors.blurColor, radius: 8).padding(.vertical,2)
                     }.padding()
                 }
-            
+            }
         }
     }
 }
