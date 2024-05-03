@@ -9,12 +9,12 @@ import Foundation
 
 struct Block: Codable{
     var type:String
+    var diameter:Double
     var length:Double
-    var width:Double
     
-    init(type: String, length: Double, width: Double) {
+    init(type: String, diameter: Double, length: Double) {
         self.type = type
+        self.diameter = diameter
         self.length = length
-        self.width = width
     }
 }
