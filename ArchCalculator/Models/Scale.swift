@@ -9,12 +9,12 @@ import Foundation
 
 struct Scale: Codable{
     var type:String
-    var length:Double
-    var width:Double
+    var larger:Double
+    var original:Double
     
-    init(type: String, length: Double, width: Double) {
+    init(type: String, larger: Double, original: Double) {
         self.type = type
-        self.length = length
-        self.width = width
+        self.larger = larger
+        self.original = original
     }
 }

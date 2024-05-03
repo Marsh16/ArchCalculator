@@ -63,11 +63,31 @@ class CalculateViewModel: ObservableObject {
     func calculateBlocks(block: Block)->[Result]{
         var results : [Result] = []
         if(block.type == "Mortar Concrete"){
-            let weight = 0.06165 * block.diameter * block.diameter * block.length
-            let result1 = Result(name: "Soil Excavation", value: "\(weight)", unit: "m³")
-            results = [result1]
+            let volume = block.length * block.width * block.height
+            let weight = 2200 * volume
+            let result1 = Result(name: "Volume", value: "\(volume)", unit: "m³")
+            let result2 = Result(name: "Concrete Weight", value: "\(weight)", unit: "kg")
+            results = [result1, result2]
         }else if (block.type == "Reinforced Concrete"){
-            
+            let volume = block.length * block.width * block.height
+            let weight = 2400 * volume
+            let result1 = Result(name: "Volume", value: "\(volume)", unit: "m³")
+            let result2 = Result(name: "Concrete Weight", value: "\(weight)", unit: "kg")
+            results = [result1, result2]
+        }
+        return results
+    }
+    
+    func calculateScale(scale: Scale)->[Result]{
+        var results : [Result] = []
+        if(scale.type == "Scale Up"){
+            let scale = scale.larger/scale.original
+            let result1 = Result(name: "Scale", value: "\(scale)", unit: "m")
+            results = [result1]
+        } else if(scale.type == "Scale Down"){
+            let scale = scale.original/scale.larger
+            let result1 = Result(name: "Scale", value: "1 : \(scale)", unit: "m")
+            results = [result1]
         }
         return results
     }
