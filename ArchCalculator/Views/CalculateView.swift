@@ -26,9 +26,9 @@ struct CalculateView: View {
     @State var columnParameter:[String] = ["Length","Width", "Height", "Begel"]
     @State var foundationParameter:[String] = ["Length","Width", "Height", "Empty Stone Height"]
     @State var foundationType:[String] = ["River Stone Foundation","Spiral Column", "Composite Column"]
-    @State var blocksType:[String] = ["Tied Blocks","Spiral Column", "Composite Column"]
+    @State var blocksType:[String] = ["Mortar Concrete","Reinforced Concrete", "Composite Column"]
     @State var blocksParameter:[String] = ["Length","Width", "Height", "Empty Stone Height"]
-    @State var scaleType:[String] = ["Tied Scale","Spiral Column", "Composite Column"]
+    @State var scaleType:[String] = ["Scale Up","Scale Down"]
     @State var scaleParameter:[String] = ["Length","Width", "Height", "Empty Stone Height"]
     @State var roofType:[String] = ["Gable Roof","Flat House Roof", "Curved Roof"]
     @State var roofParameter:[String] = ["Length","Width", "Roof Heigth", "Calculated Span"]
@@ -308,9 +308,3 @@ struct CalculateView: View {
     CalculateView(chosenStructure: StructurePlan.structurePlanList[0])
         .environmentObject(CalculateViewModel())
 }
-
-                                                                          extension String {
-                                                                              func toDouble() -> Double? {
-                                                                                  return NumberFormatter().number(from: self)?.doubleValue
-                                                                              }
-                                                                          }
