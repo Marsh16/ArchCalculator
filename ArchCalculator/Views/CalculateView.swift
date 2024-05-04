@@ -14,24 +14,24 @@ struct CalculateView: View {
     @State var columnCount:[String] = ["","","",""]
     @State var foundationCount:[String] = ["","","",""]
     @State var roofCount:[String] = ["",""]
-    @State var blocksCount:[String] = ["","","",""]
-    @State var scaleCount:[String] = ["","","",""]
+    @State var blocksCount:[String] = ["","",""]
+    @State var scaleCount:[String] = ["",""]
     @State var result:[Result] = []
-    @State var selectionColumn: String = "Tied Column"
+    @State var selectionColumn: String = "Practical Column"
     @State var selectionFoundation: String = "River Stone Foundation"
     @State var selectionRoof: String = "Gable Roof"
-    @State var selectionScale: String = ""
-    @State var selectionBlocks: String = ""
-    @State var columnType:[String] = ["Tied Column","Spiral Column", "Practical Column"]
+    @State var selectionScale: String = "Scale Up"
+    @State var selectionBlocks: String = "Mortar Concrete"
+    @State var columnType:[String] = ["Practical Column", "Square Column"]
     @State var columnParameter:[String] = ["Length","Width", "Height", "Begel"]
     @State var foundationParameter:[String] = ["Length","Width", "Height", "Empty Stone Height"]
-    @State var foundationType:[String] = ["River Stone Foundation","Spiral Column", "Composite Column"]
-    @State var blocksType:[String] = ["Mortar Concrete","Reinforced Concrete", "Composite Column"]
-    @State var blocksParameter:[String] = ["Length","Width", "Height", "Empty Stone Height"]
+    @State var foundationType:[String] = ["River Stone Foundation","Pile Foundation", "Bore Pile Foundation"]
+    @State var blocksType:[String] = ["Mortar Concrete","Reinforced Concrete", "Sand Concrete", "Solid Marble", "Solid Gypsum"]
+    @State var blocksParameter:[String] = ["Length","Width", "Height"]
     @State var scaleType:[String] = ["Scale Up","Scale Down"]
-    @State var scaleParameter:[String] = ["Length","Width", "Height", "Empty Stone Height"]
-    @State var roofType:[String] = ["Gable Roof","Flat House Roof", "Curved Roof"]
-    @State var roofParameter:[String] = ["Length","Width", "Roof Heigth", "Calculated Span"]
+    @State var scaleParameter:[String] = ["Large Value","Original Value"]
+    @State var roofType:[String] = ["Gable Roof","Flat House Roof", "Curved Roof", "Hipped Roof"]
+    @State var roofParameter:[String] = ["Length","Width"]
     var body: some View {
         NavigationStack {
             VStack{
@@ -71,134 +71,182 @@ struct CalculateView: View {
                         }
                         
                         if(chosenStructure.structureName == "Column") {
-                            HStack{
-                                Text(columnParameter[0])
-                                TextField(columnParameter[0] + " in m", text:$columnCount[0]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!columnCount[0].isEmpty){
-                                    Text("m")
+                            if (selectionColumn == "Square Column"){
+                                HStack{
+                                    Text(columnParameter[0])
+                                    TextField(columnParameter[0] + " in m", text:$columnCount[0]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!columnCount[0].isEmpty){
+                                        Text("m")
+                                    }
                                 }
-                            }
-                            HStack{
-                                Text(columnParameter[1])
-                                TextField(columnParameter[1] + " in m", text:$columnCount[1]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!columnCount[1].isEmpty){
-                                    Text("m")
+                            }else{
+                                HStack{
+                                    Text(columnParameter[0])
+                                    TextField(columnParameter[0] + " in m", text:$columnCount[0]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!columnCount[0].isEmpty){
+                                        Text("m")
+                                    }
                                 }
-                            }
-                            HStack{
-                                Text(columnParameter[2])
-                                TextField(columnParameter[2] + " in m", text:$columnCount[2]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!columnCount[2].isEmpty){
-                                    Text("m")
+                                HStack{
+                                    Text(columnParameter[1])
+                                    TextField(columnParameter[1] + " in m", text:$columnCount[1]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!columnCount[1].isEmpty){
+                                        Text("m")
+                                    }
                                 }
-                            }
-                            HStack{
-                                Text(columnParameter[3])
-                                TextField(columnParameter[3] + " in cm", text:$columnCount[3]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!columnCount[3].isEmpty){
-                                    Text("cm")
+                                HStack{
+                                    Text(columnParameter[2])
+                                    TextField(columnParameter[2] + " in m", text:$columnCount[2]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!columnCount[2].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text(columnParameter[3])
+                                    TextField(columnParameter[3] + " in cm", text:$columnCount[3]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!columnCount[3].isEmpty){
+                                        Text("cm")
+                                    }
                                 }
                             }
                         }else if(chosenStructure.structureName == "Foundation"){
-                            HStack{
-                                Text(foundationParameter[0])
-                                TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[0].isEmpty){
-                                    Text("m")
+                            if (selectionColumn == "Pile Foundation"){
+                                HStack{
+                                    Text(foundationParameter[0])
+                                    TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[0].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text(foundationParameter[1])
+                                    TextField(foundationParameter[1] + " in m", text:$foundationCount[1]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[1].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text("Material Pressure")
+                                    TextField("Material Pressure in kg/m³", text:$foundationCount[2]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[2].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text("Cone Value")
+                                    TextField("Cone Value in kg/m³", text:$foundationCount[3]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[3].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                            }else if (selectionColumn == "Bore Pile Foundation"){
+                                HStack{
+                                    Text(foundationParameter[0])
+                                    TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[0].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text("Length Between Spirals")
+                                    TextField("Length Between Spirals in m", text:$foundationCount[1]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[1].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text("Bore Pile Diameter")
+                                    TextField("Bore Pile Diameter in m", text:$foundationCount[2]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[2].isEmpty){
+                                        Text("m")
+                                    }
                                 }
                             }
-                            HStack{
-                                Text(foundationParameter[1])
-                                TextField(foundationParameter[1] + " in m", text:$foundationCount[1]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[1].isEmpty){
-                                    Text("m")
+                            else{
+                                HStack{
+                                    Text(foundationParameter[0])
+                                    TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[0].isEmpty){
+                                        Text("m")
+                                    }
                                 }
-                            }
-                            HStack{
-                                Text(foundationParameter[2])
-                                TextField(foundationParameter[2] + " in m", text:$foundationCount[2]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[2].isEmpty){
-                                    Text("m")
+                                HStack{
+                                    Text(foundationParameter[1])
+                                    TextField(foundationParameter[1] + " in m", text:$foundationCount[1]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[1].isEmpty){
+                                        Text("m")
+                                    }
                                 }
-                            }
-                            HStack{
-                                Text(foundationParameter[3])
-                                TextField(foundationParameter[3] + " in m", text:$foundationCount[3]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[3].isEmpty){
-                                    Text("m")
+                                HStack{
+                                    Text(foundationParameter[2])
+                                    TextField(foundationParameter[2] + " in m", text:$foundationCount[2]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[2].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text(foundationParameter[3])
+                                    TextField(foundationParameter[3] + " in m", text:$foundationCount[3]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!foundationCount[3].isEmpty){
+                                        Text("m")
+                                    }
                                 }
                             }
                         }else if(chosenStructure.structureName == "Blocks"){
                             HStack{
-                                Text(foundationParameter[0])
-                                TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
+                                Text(blocksParameter[0])
+                                TextField(blocksParameter[0] + " in m", text:$blocksCount[0]
                                 ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[0].isEmpty){
+                                if(!blocksCount[0].isEmpty){
                                     Text("m")
                                 }
                             }
                             HStack{
-                                Text(foundationParameter[1])
-                                TextField(foundationParameter[1] + " in m", text:$foundationCount[1]
+                                Text(blocksParameter[1])
+                                TextField(blocksParameter[1] + " in m", text:$blocksCount[1]
                                 ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[1].isEmpty){
+                                if(!blocksCount[1].isEmpty){
                                     Text("m")
                                 }
                             }
                             HStack{
-                                Text(foundationParameter[2])
-                                TextField(foundationParameter[2] + " in m", text:$foundationCount[2]
+                                Text(blocksParameter[2])
+                                TextField(blocksParameter[2] + " in m", text:$blocksCount[2]
                                 ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[2].isEmpty){
-                                    Text("m")
-                                }
-                            }
-                            HStack{
-                                Text(foundationParameter[3])
-                                TextField(foundationParameter[3] + " in m", text:$foundationCount[3]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[3].isEmpty){
+                                if(!blocksCount[2].isEmpty){
                                     Text("m")
                                 }
                             }
                         }else if(chosenStructure.structureName == "Scale"){
                             HStack{
-                                Text(foundationParameter[0])
-                                TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
+                                Text(scaleParameter[0])
+                                TextField(scaleParameter[0] + " in m", text:$scaleCount[0]
                                 ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[0].isEmpty){
+                                if(!scaleCount[0].isEmpty){
                                     Text("m")
                                 }
                             }
                             HStack{
-                                Text(foundationParameter[1])
-                                TextField(foundationParameter[1] + " in m", text:$foundationCount[1]
+                                Text(scaleParameter[1])
+                                TextField(scaleParameter[1] + " in m", text:$scaleCount[1]
                                 ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[1].isEmpty){
-                                    Text("m")
-                                }
-                            }
-                            HStack{
-                                Text(foundationParameter[2])
-                                TextField(foundationParameter[2] + " in m", text:$foundationCount[2]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[2].isEmpty){
-                                    Text("m")
-                                }
-                            }
-                            HStack{
-                                Text(foundationParameter[3])
-                                TextField(foundationParameter[3] + " in m", text:$foundationCount[3]
-                                ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
-                                if(!foundationCount[3].isEmpty){
+                                if(!scaleCount[1].isEmpty){
                                     Text("m")
                                 }
                             }
@@ -220,7 +268,25 @@ struct CalculateView: View {
                                         Text("m")
                                     }
                                 }
-                            }else{
+                            }else if(selectionRoof == "Hipped Roof" ){
+                                HStack{
+                                    Text("Length of the Hip Rafter")
+                                    TextField("Length of the Hip Rafter in m", text:$roofCount[0]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!roofCount[0].isEmpty){
+                                        Text("m")
+                                    }
+                                }
+                                HStack{
+                                    Text("Pitch of the Roof")
+                                    TextField("Pitch of the Roof", text:$roofCount[1]
+                                    ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
+                                    if(!roofCount[1].isEmpty){
+                                        Text("degrees")
+                                    }
+                                }
+                            }
+                            else{
                                 HStack{
                                     Text(roofParameter[0])
                                     TextField(roofParameter[0] + " in m", text:$roofCount[0]
@@ -249,15 +315,11 @@ struct CalculateView: View {
                             }else if(chosenStructure.structureName == "Foundation"){
                                 result = calculateViewModel.calculateFoundation(foundation: Foundations(type: selectionFoundation, length:Double(foundationCount[0]) ?? 0.0, width: Double(foundationCount[1]) ?? 0.0, height: Double(foundationCount[2]) ?? 0.0, stoneHeight: Double(foundationCount[3]) ?? 0.0))
                             }else if(chosenStructure.structureName == "Blocks"){
-                                result = calculateViewModel.calculateFoundation(foundation: Foundations(type: selectionBlocks, length:Double(foundationCount[0]) ?? 0.0, width: Double(foundationCount[1]) ?? 0.0, height: Double(foundationCount[2]) ?? 0.0, stoneHeight: Double(foundationCount[3]) ?? 0.0))
+                                result = calculateViewModel.calculateBlocks(block: Block(type: selectionBlocks, length:Double(blocksCount[0]) ?? 0.0, width: Double(blocksCount[1]) ?? 0.0, height: Double(blocksCount[2]) ?? 0.0))
                             }else if(chosenStructure.structureName == "Scale"){
-                                result = calculateViewModel.calculateFoundation(foundation: Foundations(type: selectionScale, length:Double(foundationCount[0]) ?? 0.0, width: Double(foundationCount[1]) ?? 0.0, height: Double(foundationCount[2]) ?? 0.0, stoneHeight: Double(foundationCount[3]) ?? 0.0))
+                                result = calculateViewModel.calculateScale(scale: Scale(type: selectionScale, larger:Double(scaleCount[0]) ?? 0.0, original: Double(scaleCount[1]) ?? 0.0))
                             }else{
                                 result = calculateViewModel.calculateRoof(roof: Roof(type: selectionRoof, length:Double(roofCount[0]) ?? 0.0, width: Double(roofCount[1]) ?? 0.0))
-//                                                                          print(roofCount[0]),
-//                                print(Double(roofCount[0]) as Any)
-//                                print(roofCount[1])
-//                                print(result)
                             }
                         }.multilineTextAlignment(.center).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     }else{
@@ -267,9 +329,9 @@ struct CalculateView: View {
                             }else if(chosenStructure.structureName == "Foundation"){
                                 result = calculateViewModel.calculateFoundation(foundation: Foundations(type: selectionFoundation, length:Double(foundationCount[0]) ?? 0.0, width: Double(foundationCount[1]) ?? 0.0, height: Double(foundationCount[2]) ?? 0.0, stoneHeight: Double(foundationCount[3]) ?? 0.0))
                             }else if(chosenStructure.structureName == "Blocks"){
-                                result = calculateViewModel.calculateFoundation(foundation: Foundations(type: selectionBlocks, length:Double(foundationCount[0]) ?? 0.0, width: Double(foundationCount[1]) ?? 0.0, height: Double(foundationCount[2]) ?? 0.0, stoneHeight: Double(foundationCount[3]) ?? 0.0))
+                                result = calculateViewModel.calculateBlocks(block: Block(type: selectionBlocks, length:Double(blocksCount[0]) ?? 0.0, width: Double(blocksCount[1]) ?? 0.0, height: Double(blocksCount[2]) ?? 0.0))
                             }else if(chosenStructure.structureName == "Scale"){
-                                result = calculateViewModel.calculateFoundation(foundation: Foundations(type: selectionScale, length:Double(foundationCount[0]) ?? 0.0, width: Double(foundationCount[1]) ?? 0.0, height: Double(foundationCount[2]) ?? 0.0, stoneHeight: Double(foundationCount[3]) ?? 0.0))
+                                result = calculateViewModel.calculateScale(scale: Scale(type: selectionScale, larger:Double(scaleCount[0]) ?? 0.0, original: Double(scaleCount[1]) ?? 0.0))
                             }else{
                                 result = calculateViewModel.calculateRoof(roof: Roof(type: selectionRoof, length:Double(roofCount[0]) ?? 0.0, width: Double(roofCount[1]) ?? 0.0))
                             }
