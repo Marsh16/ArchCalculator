@@ -137,7 +137,7 @@ struct CalculateView: View {
                                     TextField("Material Pressure in kg/m³", text:$foundationCount[2]
                                     ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
                                     if(!foundationCount[2].isEmpty){
-                                        Text("m")
+                                        Text("kg/m³")
                                     }
                                 }
                                 HStack{
@@ -145,7 +145,7 @@ struct CalculateView: View {
                                     TextField("Cone Value in kg/m³", text:$foundationCount[3]
                                     ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
                                     if(!foundationCount[3].isEmpty){
-                                        Text("m")
+                                        Text("kg/m³")
                                     }
                                 }
                             }else if (selectionFoundation == "Bore Pile Foundation"){
@@ -279,7 +279,7 @@ struct CalculateView: View {
                                 }
                                 HStack{
                                     Text("Pitch of the Roof")
-                                    TextField("Pitch of the Roof", text:$roofCount[1]
+                                    TextField("Pitch of the Roof in degrees", text:$roofCount[1]
                                     ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
                                     if(!roofCount[1].isEmpty){
                                         Text("degrees")
