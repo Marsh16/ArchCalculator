@@ -15,6 +15,9 @@ struct HomeView: View {
     var body: some View {
         NavigationStack{
             VStack{
+                if (structurePlanViewModel.filteredStructurePlan.count == 0){
+                    ContentUnavailableView.search
+                }
                 List(structurePlanViewModel.filteredStructurePlan){
                     structurePlan in
                     if (colorScheme == .dark){
@@ -109,23 +112,26 @@ struct HomeView: View {
                                         Image(systemName: "list.bullet.clipboard.fill").resizable().frame(width: 20, height: 30, alignment: .center).foregroundColor(.blue)
                                         Text("How it Works?").font(.title2).bold()
                                     }.padding(.top)
-                                        Text("1. Choose the category (Column, Foundation, Blocks, Scale or Roof)").font(.headline).fontWeight(.regular)
-                                        Text("2. Input the value you want to calculate").font(.headline).fontWeight(.regular)
-                                        Text("3. Press the calculate button or recalculate button (if you want to recalculate)").font(.headline).fontWeight(.regular)
-                                        Text("4. Read your result!").font(.headline).fontWeight(.regular)
-                                 
+                                    Text("1. Choose the category (Column, Foundation, Blocks, Scale or Roof)").font(.headline).fontWeight(.regular)
+                                    Text("2. Input the value you want to calculate").font(.headline).fontWeight(.regular)
+                                    Text("3. Press the calculate button or recalculate button (if you want to recalculate)").font(.headline).fontWeight(.regular)
+                                    Text("4. Read your result!").font(.headline).fontWeight(.regular)
+                                    
                                     Spacer()
                                 }.toolbar{
                                     Button("Done"){
                                         isPresenting.toggle()
                                     }.padding().multilineTextAlignment(.leading)
-                            }.navigationBarTitleDisplayMode(.inline).navigationTitle("About").padding()
+                                }.navigationBarTitleDisplayMode(.inline).navigationTitle("About").padding()
                             }
                         }
                     }
                 }
             
         }.searchable(text: $structurePlanViewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
+        //        {
+        //            ContentUnavailableView.search
+        //        }
     }
 }
 

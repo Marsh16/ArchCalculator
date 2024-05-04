@@ -342,7 +342,7 @@ struct CalculateView: View {
                             }
                         }.multilineTextAlignment(.center).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     }
-                   
+
                     if(!result.isEmpty){
                         Section{
                             List{
@@ -350,8 +350,13 @@ struct CalculateView: View {
                                     HStack{
                                         Text(result.name).fontWeight(.regular)
                                             .frame(maxWidth: .infinity, alignment: .topLeading)
-                                        Text(result.value + " " + result.unit).fontWeight(.bold)
-                                            .multilineTextAlignment(.trailing)
+                                        if (selectionScale == "Scale Down"){
+                                            Text(result.value + " " + result.unit).fontWeight(.bold)
+                                                .multilineTextAlignment(.trailing)
+                                        }else{
+                                            Text(NumberFormat(result.value) + " " + result.unit).fontWeight(.bold)
+                                                .multilineTextAlignment(.trailing)
+                                        }
                                     }
                                 }
                             }
