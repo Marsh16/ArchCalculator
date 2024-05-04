@@ -115,7 +115,7 @@ struct CalculateView: View {
                                 }
                             }
                         }else if(chosenStructure.structureName == "Foundation"){
-                            if (selectionColumn == "Pile Foundation"){
+                            if (selectionFoundation == "Pile Foundation"){
                                 HStack{
                                     Text(foundationParameter[0])
                                     TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
@@ -148,7 +148,7 @@ struct CalculateView: View {
                                         Text("m")
                                     }
                                 }
-                            }else if (selectionColumn == "Bore Pile Foundation"){
+                            }else if (selectionFoundation == "Bore Pile Foundation"){
                                 HStack{
                                     Text(foundationParameter[0])
                                     TextField(foundationParameter[0] + " in m", text:$foundationCount[0]
@@ -253,16 +253,16 @@ struct CalculateView: View {
                         }else{
                             if(selectionRoof == "Curved Roof" ){
                                 HStack{
-                                    Text(roofParameter[2])
-                                    TextField(roofParameter[2] + " in m", text:$roofCount[0]
+                                    Text(roofParameter[0])
+                                    TextField(roofParameter[0] + " in m", text:$roofCount[0]
                                     ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
                                     if(!roofCount[0].isEmpty){
                                         Text("m")
                                     }
                                 }
                                 HStack{
-                                    Text(roofParameter[3])
-                                    TextField(roofParameter[3] + " in m", text:$roofCount[1]
+                                    Text(roofParameter[1])
+                                    TextField(roofParameter[1] + " in m", text:$roofCount[1]
                                     ).multilineTextAlignment(.trailing).keyboardType(.decimalPad)
                                     if(!roofCount[1].isEmpty){
                                         Text("m")
