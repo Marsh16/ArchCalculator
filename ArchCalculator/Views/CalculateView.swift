@@ -353,6 +353,9 @@ struct CalculateView: View {
                                         if (selectionScale == "Scale Down"){
                                             Text(result.value + " " + result.unit).fontWeight(.bold)
                                                 .multilineTextAlignment(.trailing)
+                                        }else if (selectionScale == "Scale Up"){
+                                            Text(result.value + " " + result.unit).fontWeight(.bold)
+                                                .multilineTextAlignment(.trailing)
                                         }else if (selectionColumn == "Square Column"){
                                             Text(result.value + " " + result.unit).fontWeight(.bold)
                                                 .multilineTextAlignment(.trailing)

@@ -17,77 +17,78 @@ struct HomeView: View {
             VStack{
                 if (structurePlanViewModel.filteredStructurePlan.count == 0){
                     ContentUnavailableView.search
-                }
-                List(structurePlanViewModel.filteredStructurePlan){
-                    structurePlan in
-                    if (colorScheme == .dark){
-                        ZStack(alignment: .leading) {
-                            HStack{
-                                VStack{
-                                    HStack{
-                                        VStack{
-                                            Image(structurePlan.structureIcon).resizable().padding().frame(width: 80, height: 80).scaledToFit()
-                                        }
-                                        VStack{
-                                            NavigationLink(destination: CalculateView(chosenStructure: structurePlan) .environmentObject(CalculateViewModel())){
-                                                VStack{
-                                                    Text(structurePlan.structureName).fontWeight(.bold).font(.title2)
-                                                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                                                    Text(structurePlan.structureDescription).fontWeight(.regular).font(.caption)
-                                                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                }else{
+                    List(structurePlanViewModel.filteredStructurePlan){
+                        structurePlan in
+                        if (colorScheme == .dark){
+                            ZStack(alignment: .leading) {
+                                HStack{
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                                Image(structurePlan.structureIcon).resizable().padding().frame(width: 80, height: 80).scaledToFit()
+                                            }
+                                            VStack{
+                                                NavigationLink(destination: CalculateView(chosenStructure: structurePlan) .environmentObject(CalculateViewModel())){
+                                                    VStack{
+                                                        Text(structurePlan.structureName).fontWeight(.bold).font(.title2)
+                                                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                                                        Text(structurePlan.structureDescription).fontWeight(.regular).font(.caption)
+                                                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                                                    }
                                                 }
                                             }
                                         }
                                     }
-                                }
-                            }.padding(.vertical)
-                        }.listRowSeparator(.hidden).listRowBackground(
-                            RoundedRectangle(cornerRadius: 10)
-                                .background(.clear)
-                                .foregroundColor(Colors.greyColor)
-                                .padding(
-                                    EdgeInsets(
-                                        top: 8,
-                                        leading: 0,
-                                        bottom: 8,
-                                        trailing: 0
+                                }.padding(.vertical)
+                            }.listRowSeparator(.hidden).listRowBackground(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .background(.clear)
+                                    .foregroundColor(Colors.greyColor)
+                                    .padding(
+                                        EdgeInsets(
+                                            top: 8,
+                                            leading: 0,
+                                            bottom: 8,
+                                            trailing: 0
+                                        )
                                     )
-                                )
-                        )
-                    }               else{
-                        ZStack(alignment: .leading) {
-                            HStack{
-                                VStack{
-                                    HStack{
-                                        VStack{
-                                            Image(structurePlan.structureIcon).resizable().padding().frame(width: 80, height: 80).scaledToFit()
-                                        }
-                                        VStack{
-                                            NavigationLink(destination: CalculateView(chosenStructure: structurePlan) .environmentObject(CalculateViewModel())){
-                                                VStack{
-                                                    Text(structurePlan.structureName).fontWeight(.bold).font(.title2)
-                                                        .frame(maxWidth: .infinity, alignment: .topLeading)
-                                                    Text(structurePlan.structureDescription).fontWeight(.regular).font(.caption)
-                                                        .frame(maxWidth: .infinity, alignment: .topLeading)
+                            )
+                        }               else{
+                            ZStack(alignment: .leading) {
+                                HStack{
+                                    VStack{
+                                        HStack{
+                                            VStack{
+                                                Image(structurePlan.structureIcon).resizable().padding().frame(width: 80, height: 80).scaledToFit()
+                                            }
+                                            VStack{
+                                                NavigationLink(destination: CalculateView(chosenStructure: structurePlan) .environmentObject(CalculateViewModel())){
+                                                    VStack{
+                                                        Text(structurePlan.structureName).fontWeight(.bold).font(.title2)
+                                                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                                                        Text(structurePlan.structureDescription).fontWeight(.regular).font(.caption)
+                                                            .frame(maxWidth: .infinity, alignment: .topLeading)
+                                                    }
                                                 }
                                             }
                                         }
                                     }
-                                }
-                            }.padding(.vertical)
-                        }.listRowSeparator(.hidden).listRowBackground(
-                            RoundedRectangle(cornerRadius: 10)
-                                .background(.clear)
-                                .foregroundColor(.white)
-                                .padding(
-                                    EdgeInsets(
-                                        top: 8,
-                                        leading: 0,
-                                        bottom: 8,
-                                        trailing: 0
+                                }.padding(.vertical)
+                            }.listRowSeparator(.hidden).listRowBackground(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .background(.clear)
+                                    .foregroundColor(.white)
+                                    .padding(
+                                        EdgeInsets(
+                                            top: 8,
+                                            leading: 0,
+                                            bottom: 8,
+                                            trailing: 0
+                                        )
                                     )
-                                )
-                        )
+                            )
+                        }
                     }
                 }
             }.navigationTitle("ArchCalculator")
@@ -107,7 +108,7 @@ struct HomeView: View {
                                         Image(systemName: "questionmark.app.fill").resizable().frame(width: 25, height: 25, alignment: .center).foregroundColor(.blue)
                                         Text("What is ArchCalculator?").font(.title2).bold()
                                     }
-                                    Text("ArchCalculator is an app to help Achitecture Student Calculate Structural Plans. There are many categories, such as Column, Foundation Blocks, Scale and Roof. Each categories have their own calculation which calculate according to the type of structure of each category.").font(.headline).fontWeight(.regular)
+                                    Text("ArchCalculator is an app to help Achitecture Student Calculate Structural Plans. There are many categories, such as Column, Foundation, Blocks, Scale and Roof. Each categories have their own calculation which calculate according to the type of structure of each category.").font(.headline).fontWeight(.regular)
                                     HStack{
                                         Image(systemName: "list.bullet.clipboard.fill").resizable().frame(width: 20, height: 30, alignment: .center).foregroundColor(.blue)
                                         Text("How it Works?").font(.title2).bold()
