@@ -342,7 +342,7 @@ struct CalculateView: View {
                             }
                         }.multilineTextAlignment(.center).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
                     }
-
+                    
                     if(!result.isEmpty){
                         Section{
                             List{
@@ -350,17 +350,23 @@ struct CalculateView: View {
                                     HStack{
                                         Text(result.name).fontWeight(.regular)
                                             .frame(maxWidth: .infinity, alignment: .topLeading)
-                                        if (selectionScale == "Scale Down"){
-                                            Text(result.value + " " + result.unit).fontWeight(.bold)
-                                                .multilineTextAlignment(.trailing)
-                                        }else if (selectionScale == "Scale Up"){
-                                            Text(result.value + " " + result.unit).fontWeight(.bold)
-                                                .multilineTextAlignment(.trailing)
-                                        }else if (selectionColumn == "Square Column"){
-                                            Text(result.value + " " + result.unit).fontWeight(.bold)
-                                                .multilineTextAlignment(.trailing)
-                                        }
-                                        else{
+                                        if (chosenStructure.structureName == "Scale"){
+                                            if (selectionScale == "Scale Down"){
+                                                Text(result.value + " " + result.unit).fontWeight(.bold)
+                                                    .multilineTextAlignment(.trailing)
+                                            }else {
+                                                Text(result.value + " " + result.unit).fontWeight(.bold)
+                                                    .multilineTextAlignment(.trailing)
+                                            }
+                                        } else  if (chosenStructure.structureName == "Column"){
+                                            if (selectionColumn == "Square Column"){
+                                                Text(result.value + " " + result.unit).fontWeight(.bold)
+                                                    .multilineTextAlignment(.trailing)
+                                            }else{
+                                                Text(NumberFormat(result.value) + " " + result.unit).fontWeight(.bold)
+                                                    .multilineTextAlignment(.trailing)
+                                            }
+                                        }else{
                                             Text(NumberFormat(result.value) + " " + result.unit).fontWeight(.bold)
                                                 .multilineTextAlignment(.trailing)
                                         }
