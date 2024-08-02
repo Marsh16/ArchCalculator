@@ -130,9 +130,6 @@ struct HomeView: View {
                 }
             
         }.searchable(text: $structurePlanViewModel.searchText, placement: .navigationBarDrawer(displayMode: .always))
-        //        {
-        //            ContentUnavailableView.search
-        //        }
     }
 }
 

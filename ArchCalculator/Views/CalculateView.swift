@@ -373,7 +373,6 @@ struct CalculateView: View {
                                     }
                                 }
                             }
-//                            Image("ArchMountain").resizable().padding().frame(width: .infinity).listRowSeparator(.hidden).background(Color.white).clipShape(RoundedRectangle(cornerRadius: 10))
                         }header: {
                             Text("Result")
                         }
