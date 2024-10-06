@@ -19,12 +19,53 @@
 		060A39C62BE099B500121B19 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060A39C52BE099B500121B19 /* Result.swift */; };
 		0638E3CC2BE6706D00A65EAA /* NumberFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0638E3CB2BE6706D00A65EAA /* NumberFormat.swift */; };
 		063C9CD72BD894EC0059A109 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063C9CD62BD894EC0059A109 /* Colors.swift */; };
+		0669E1BE2CAFD1D700C33981 /* ArchCalculatorClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1BD2CAFD1D700C33981 /* ArchCalculatorClipApp.swift */; };
+		0669E1C02CAFD1D700C33981 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1BF2CAFD1D700C33981 /* ContentView.swift */; };
+		0669E1C42CAFD1D800C33981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0669E1C32CAFD1D800C33981 /* Assets.xcassets */; };
+		0669E1C72CAFD1D800C33981 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0669E1C62CAFD1D800C33981 /* Preview Assets.xcassets */; };
+		0669E1CC2CAFD1D800C33981 /* ArchCalculatorClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 0669E1BB2CAFD1D700C33981 /* ArchCalculatorClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0669E1D32CAFD2F400C33981 /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1D22CAFD2F400C33981 /* CalculateView.swift */; };
+		0669E1D62CAFD31800C33981 /* StructurePlanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1D52CAFD31800C33981 /* StructurePlanViewModel.swift */; };
+		0669E1D82CAFD33200C33981 /* CalculateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1D72CAFD33200C33981 /* CalculateViewModel.swift */; };
+		0669E1DB2CAFD37000C33981 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1DA2CAFD37000C33981 /* Colors.swift */; };
+		0669E1DD2CAFD38B00C33981 /* NumberFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1DC2CAFD38B00C33981 /* NumberFormat.swift */; };
+		0669E1DF2CAFD3A100C33981 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1DE2CAFD3A100C33981 /* Column.swift */; };
+		0669E1E22CAFD3B900C33981 /* Roof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1E12CAFD3B900C33981 /* Roof.swift */; };
+		0669E1E42CAFD3D000C33981 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1E32CAFD3D000C33981 /* Foundation.swift */; };
+		0669E1E62CAFD3DF00C33981 /* StructurePlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1E52CAFD3DF00C33981 /* StructurePlan.swift */; };
+		0669E1E82CAFD3FB00C33981 /* Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1E72CAFD3FB00C33981 /* Blocks.swift */; };
+		0669E1EA2CAFD42D00C33981 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1E92CAFD42D00C33981 /* Scale.swift */; };
+		0669E1EC2CAFD43F00C33981 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0669E1EB2CAFD43F00C33981 /* Result.swift */; };
 		069DB1682BE4153C00498992 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069DB1672BE4153C00498992 /* HomeView.swift */; };
 		069DB16A2BE4155B00498992 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069DB1692BE4155B00498992 /* SplashView.swift */; };
 		06A988D42BDB542C004BBE37 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D32BDB542C004BBE37 /* Column.swift */; };
 		06A988D62BDB819F004BBE37 /* Roof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D52BDB819F004BBE37 /* Roof.swift */; };
 		06A988D82BDB8691004BBE37 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D72BDB8691004BBE37 /* Foundation.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0669E1CA2CAFD1D800C33981 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0603845A2BD7E56900BD3D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0669E1BA2CAFD1D700C33981;
+			remoteInfo = ArchCalculatorClip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0669E1CD2CAFD1D800C33981 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				0669E1CC2CAFD1D800C33981 /* ArchCalculatorClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		060384622BD7E56900BD3D5A /* ArchCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +81,25 @@
 		060A39C52BE099B500121B19 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		0638E3CB2BE6706D00A65EAA /* NumberFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormat.swift; sourceTree = "<group>"; };
 		063C9CD62BD894EC0059A109 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0669E1BB2CAFD1D700C33981 /* ArchCalculatorClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchCalculatorClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0669E1BD2CAFD1D700C33981 /* ArchCalculatorClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorClipApp.swift; sourceTree = "<group>"; };
+		0669E1BF2CAFD1D700C33981 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0669E1C32CAFD1D800C33981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0669E1C62CAFD1D800C33981 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0669E1C82CAFD1D800C33981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0669E1C92CAFD1D800C33981 /* ArchCalculatorClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArchCalculatorClip.entitlements; sourceTree = "<group>"; };
+		0669E1D22CAFD2F400C33981 /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
+		0669E1D52CAFD31800C33981 /* StructurePlanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePlanViewModel.swift; sourceTree = "<group>"; };
+		0669E1D72CAFD33200C33981 /* CalculateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewModel.swift; sourceTree = "<group>"; };
+		0669E1DA2CAFD37000C33981 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0669E1DC2CAFD38B00C33981 /* NumberFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormat.swift; sourceTree = "<group>"; };
+		0669E1DE2CAFD3A100C33981 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		0669E1E12CAFD3B900C33981 /* Roof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roof.swift; sourceTree = "<group>"; };
+		0669E1E32CAFD3D000C33981 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		0669E1E52CAFD3DF00C33981 /* StructurePlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructurePlan.swift; sourceTree = "<group>"; };
+		0669E1E72CAFD3FB00C33981 /* Blocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocks.swift; sourceTree = "<group>"; };
+		0669E1E92CAFD42D00C33981 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		0669E1EB2CAFD43F00C33981 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		069DB1672BE4153C00498992 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		069DB1692BE4155B00498992 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		06A988D32BDB542C004BBE37 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
@@ -55,6 +115,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0669E1B82CAFD1D700C33981 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -62,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				060384642BD7E56900BD3D5A /* ArchCalculator */,
+				0669E1BC2CAFD1D700C33981 /* ArchCalculatorClip */,
 				060384632BD7E56900BD3D5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				060384622BD7E56900BD3D5A /* ArchCalculator.app */,
+				0669E1BB2CAFD1D700C33981 /* ArchCalculatorClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +172,71 @@
 				0638E3CB2BE6706D00A65EAA /* NumberFormat.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		0669E1BC2CAFD1D700C33981 /* ArchCalculatorClip */ = {
+			isa = PBXGroup;
+			children = (
+				0669E1E02CAFD3A700C33981 /* Models */,
+				0669E1D92CAFD35E00C33981 /* Helpers */,
+				0669E1D42CAFD30000C33981 /* ViewModels */,
+				0669E1D12CAFD2C000C33981 /* Views */,
+				0669E1BD2CAFD1D700C33981 /* ArchCalculatorClipApp.swift */,
+				0669E1C32CAFD1D800C33981 /* Assets.xcassets */,
+				0669E1C82CAFD1D800C33981 /* Info.plist */,
+				0669E1C92CAFD1D800C33981 /* ArchCalculatorClip.entitlements */,
+				0669E1C52CAFD1D800C33981 /* Preview Content */,
+			);
+			path = ArchCalculatorClip;
+			sourceTree = "<group>";
+		};
+		0669E1C52CAFD1D800C33981 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0669E1C62CAFD1D800C33981 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0669E1D12CAFD2C000C33981 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0669E1BF2CAFD1D700C33981 /* ContentView.swift */,
+				0669E1D22CAFD2F400C33981 /* CalculateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0669E1D42CAFD30000C33981 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0669E1D52CAFD31800C33981 /* StructurePlanViewModel.swift */,
+				0669E1D72CAFD33200C33981 /* CalculateViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0669E1D92CAFD35E00C33981 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0669E1DA2CAFD37000C33981 /* Colors.swift */,
+				0669E1DC2CAFD38B00C33981 /* NumberFormat.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0669E1E02CAFD3A700C33981 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0669E1DE2CAFD3A100C33981 /* Column.swift */,
+				0669E1E12CAFD3B900C33981 /* Roof.swift */,
+				0669E1E32CAFD3D000C33981 /* Foundation.swift */,
+				0669E1E52CAFD3DF00C33981 /* StructurePlan.swift */,
+				0669E1E72CAFD3FB00C33981 /* Blocks.swift */,
+				0669E1E92CAFD42D00C33981 /* Scale.swift */,
+				0669E1EB2CAFD43F00C33981 /* Result.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		06A988BF2BDB5361004BBE37 /* Models */ = {
@@ -148,15 +282,34 @@
 				0603845E2BD7E56900BD3D5A /* Sources */,
 				0603845F2BD7E56900BD3D5A /* Frameworks */,
 				060384602BD7E56900BD3D5A /* Resources */,
+				0669E1CD2CAFD1D800C33981 /* Embed App Clips */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0669E1CB2CAFD1D800C33981 /* PBXTargetDependency */,
 			);
 			name = ArchCalculator;
 			productName = ArchCalculator;
 			productReference = 060384622BD7E56900BD3D5A /* ArchCalculator.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0669E1BA2CAFD1D700C33981 /* ArchCalculatorClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0669E1D02CAFD1D800C33981 /* Build configuration list for PBXNativeTarget "ArchCalculatorClip" */;
+			buildPhases = (
+				0669E1B72CAFD1D700C33981 /* Sources */,
+				0669E1B82CAFD1D700C33981 /* Frameworks */,
+				0669E1B92CAFD1D700C33981 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArchCalculatorClip;
+			productName = ArchCalculatorClip;
+			productReference = 0669E1BB2CAFD1D700C33981 /* ArchCalculatorClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 /* End PBXNativeTarget section */
 
@@ -165,11 +318,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					060384612BD7E56900BD3D5A = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					0669E1BA2CAFD1D700C33981 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -187,6 +343,7 @@
 			projectRoot = "";
 			targets = (
 				060384612BD7E56900BD3D5A /* ArchCalculator */,
+				0669E1BA2CAFD1D700C33981 /* ArchCalculatorClip */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +355,15 @@
 			files = (
 				0603846F2BD7E56A00BD3D5A /* Preview Assets.xcassets in Resources */,
 				0603846C2BD7E56A00BD3D5A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0669E1B92CAFD1D700C33981 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0669E1C72CAFD1D800C33981 /* Preview Assets.xcassets in Resources */,
+				0669E1C42CAFD1D800C33981 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +392,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0669E1B72CAFD1D700C33981 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0669E1C02CAFD1D700C33981 /* ContentView.swift in Sources */,
+				0669E1DB2CAFD37000C33981 /* Colors.swift in Sources */,
+				0669E1D32CAFD2F400C33981 /* CalculateView.swift in Sources */,
+				0669E1DD2CAFD38B00C33981 /* NumberFormat.swift in Sources */,
+				0669E1EC2CAFD43F00C33981 /* Result.swift in Sources */,
+				0669E1D82CAFD33200C33981 /* CalculateViewModel.swift in Sources */,
+				0669E1E22CAFD3B900C33981 /* Roof.swift in Sources */,
+				0669E1EA2CAFD42D00C33981 /* Scale.swift in Sources */,
+				0669E1DF2CAFD3A100C33981 /* Column.swift in Sources */,
+				0669E1BE2CAFD1D700C33981 /* ArchCalculatorClipApp.swift in Sources */,
+				0669E1E62CAFD3DF00C33981 /* StructurePlan.swift in Sources */,
+				0669E1E82CAFD3FB00C33981 /* Blocks.swift in Sources */,
+				0669E1E42CAFD3D000C33981 /* Foundation.swift in Sources */,
+				0669E1D62CAFD31800C33981 /* StructurePlanViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0669E1CB2CAFD1D800C33981 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0669E1BA2CAFD1D700C33981 /* ArchCalculatorClip */;
+			targetProxy = 0669E1CA2CAFD1D800C33981 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		060384702BD7E56A00BD3D5A /* Debug */ = {
@@ -351,6 +546,7 @@
 		060384732BD7E56A00BD3D5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +555,7 @@
 				DEVELOPMENT_TEAM = 7573MGT656;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ArchCalculator;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -368,18 +565,23 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
 		060384742BD7E56A00BD3D5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +590,7 @@
 				DEVELOPMENT_TEAM = 7573MGT656;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ArchCalculator;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -397,12 +600,90 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		0669E1CE2CAFD1D800C33981 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ArchCalculatorClip/ArchCalculatorClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ArchCalculatorClip/Preview Content\"";
+				DEVELOPMENT_TEAM = 7573MGT656;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArchCalculatorClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ArchCalculator;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		0669E1CF2CAFD1D800C33981 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ArchCalculatorClip/ArchCalculatorClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ArchCalculatorClip/Preview Content\"";
+				DEVELOPMENT_TEAM = 7573MGT656;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArchCalculatorClip/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ArchCalculator;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};
@@ -423,6 +704,15 @@
 			buildConfigurations = (
 				060384732BD7E56A00BD3D5A /* Debug */,
 				060384742BD7E56A00BD3D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0669E1D02CAFD1D800C33981 /* Build configuration list for PBXNativeTarget "ArchCalculatorClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0669E1CE2CAFD1D800C33981 /* Debug */,
+				0669E1CF2CAFD1D800C33981 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
