@@ -6,9 +6,5 @@
 	<array>
 		<string>appclips:marsh16.github.io</string>
 	</array>
-	<key>com.apple.developer.parent-application-identifiers</key>
-	<array>
-		<string>$(AppIdentifierPrefix)cip.ArchCalculator</string>
-	</array>
 </dict>
 </plist>

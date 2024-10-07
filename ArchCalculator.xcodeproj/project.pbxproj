@@ -100,6 +100,9 @@
 		0669E1E72CAFD3FB00C33981 /* Blocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocks.swift; sourceTree = "<group>"; };
 		0669E1E92CAFD42D00C33981 /* Scale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		0669E1EB2CAFD43F00C33981 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0697C8802CB3FEFF009988CB /* ArchCalculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArchCalculator.entitlements; sourceTree = "<group>"; };
+		0697C8812CB41A52009988CB /* ArchCalculatorRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArchCalculatorRelease.entitlements; sourceTree = "<group>"; };
+		0697C8822CB41A65009988CB /* ArchCalculatorClipRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArchCalculatorClipRelease.entitlements; sourceTree = "<group>"; };
 		069DB1672BE4153C00498992 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		069DB1692BE4155B00498992 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		06A988D32BDB542C004BBE37 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 		060384642BD7E56900BD3D5A /* ArchCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				0697C8812CB41A52009988CB /* ArchCalculatorRelease.entitlements */,
+				0697C8802CB3FEFF009988CB /* ArchCalculator.entitlements */,
 				060A39B82BDF369400121B19 /* Helper */,
 				06A988CA2BDB5389004BBE37 /* Views */,
 				06A988C02BDB5367004BBE37 /* ViewModels */,
@@ -177,6 +182,7 @@
 		0669E1BC2CAFD1D700C33981 /* ArchCalculatorClip */ = {
 			isa = PBXGroup;
 			children = (
+				0697C8822CB41A65009988CB /* ArchCalculatorClipRelease.entitlements */,
 				0669E1E02CAFD3A700C33981 /* Models */,
 				0669E1D92CAFD35E00C33981 /* Helpers */,
 				0669E1D42CAFD30000C33981 /* ViewModels */,
@@ -549,6 +555,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ArchCalculator/ArchCalculator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ArchCalculator/Preview Content\"";
@@ -565,7 +572,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -584,6 +591,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ArchCalculator/ArchCalculatorRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ArchCalculator/Preview Content\"";
@@ -600,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -637,7 +645,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -655,7 +663,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ArchCalculatorClip/ArchCalculatorClip.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ArchCalculatorClip/ArchCalculatorClipRelease.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ArchCalculatorClip/Preview Content\"";
@@ -674,7 +682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = cip.ArchCalculator.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
