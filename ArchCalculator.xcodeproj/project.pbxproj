@@ -41,6 +41,10 @@
 		06A988D42BDB542C004BBE37 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D32BDB542C004BBE37 /* Column.swift */; };
 		06A988D62BDB819F004BBE37 /* Roof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D52BDB819F004BBE37 /* Roof.swift */; };
 		06A988D82BDB8691004BBE37 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A988D72BDB8691004BBE37 /* Foundation.swift */; };
+		FF7CF9A72CB4C0CB0086C3A6 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF9A62CB4C0CB0086C3A6 /* NotificationManager.swift */; };
+		FF7CF9CE2CB4D8AD0086C3A6 /* ArchCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF9CD2CB4D8AD0086C3A6 /* ArchCalculatorUITests.swift */; };
+		FF7CF9D02CB4D8AD0086C3A6 /* ArchCalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF9CF2CB4D8AD0086C3A6 /* ArchCalculatorUITestsLaunchTests.swift */; };
+		FF7CF9DD2CB4D9750086C3A6 /* ArchCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF9DC2CB4D9750086C3A6 /* ArchCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0669E1BA2CAFD1D700C33981;
 			remoteInfo = ArchCalculatorClip;
+		};
+		FF7CF9D12CB4D8AD0086C3A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0603845A2BD7E56900BD3D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 060384612BD7E56900BD3D5A;
+			remoteInfo = ArchCalculator;
+		};
+		FF7CF9DE2CB4D9750086C3A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0603845A2BD7E56900BD3D5A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 060384612BD7E56900BD3D5A;
+			remoteInfo = ArchCalculator;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -108,6 +126,17 @@
 		06A988D32BDB542C004BBE37 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		06A988D52BDB819F004BBE37 /* Roof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roof.swift; sourceTree = "<group>"; };
 		06A988D72BDB8691004BBE37 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		FF7CF9A62CB4C0CB0086C3A6 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		FF7CF9A82CB4C71A0086C3A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF7CF9AF2CB4D1190086C3A6 /* ArchCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorUITests.swift; sourceTree = "<group>"; };
+		FF7CF9B12CB4D1190086C3A6 /* ArchCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF7CF9BE2CB4D2080086C3A6 /* ArchCalculatorUITestss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorUITestss.swift; sourceTree = "<group>"; };
+		FF7CF9C02CB4D2080086C3A6 /* ArchCalculatorUITestssLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorUITestssLaunchTests.swift; sourceTree = "<group>"; };
+		FF7CF9CB2CB4D8AD0086C3A6 /* ArchCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7CF9CD2CB4D8AD0086C3A6 /* ArchCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorUITests.swift; sourceTree = "<group>"; };
+		FF7CF9CF2CB4D8AD0086C3A6 /* ArchCalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF7CF9DA2CB4D9750086C3A6 /* ArchCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF7CF9DC2CB4D9750086C3A6 /* ArchCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +154,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7CF9C82CB4D8AD0086C3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7CF9D72CB4D9750086C3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -133,6 +176,10 @@
 			children = (
 				060384642BD7E56900BD3D5A /* ArchCalculator */,
 				0669E1BC2CAFD1D700C33981 /* ArchCalculatorClip */,
+				FF7CF9AE2CB4D1190086C3A6 /* ArchCalculatorUITests */,
+				FF7CF9BD2CB4D2080086C3A6 /* ArchCalculatorUITestss */,
+				FF7CF9CC2CB4D8AD0086C3A6 /* ArchCalculatorUITests */,
+				FF7CF9DB2CB4D9750086C3A6 /* ArchCalculatorTests */,
 				060384632BD7E56900BD3D5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,6 +189,8 @@
 			children = (
 				060384622BD7E56900BD3D5A /* ArchCalculator.app */,
 				0669E1BB2CAFD1D700C33981 /* ArchCalculatorClip.app */,
+				FF7CF9CB2CB4D8AD0086C3A6 /* ArchCalculatorUITests.xctest */,
+				FF7CF9DA2CB4D9750086C3A6 /* ArchCalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +198,7 @@
 		060384642BD7E56900BD3D5A /* ArchCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				FF7CF9A82CB4C71A0086C3A6 /* Info.plist */,
 				0697C8812CB41A52009988CB /* ArchCalculatorRelease.entitlements */,
 				0697C8802CB3FEFF009988CB /* ArchCalculator.entitlements */,
 				060A39B82BDF369400121B19 /* Helper */,
@@ -175,6 +225,7 @@
 			children = (
 				063C9CD62BD894EC0059A109 /* Colors.swift */,
 				0638E3CB2BE6706D00A65EAA /* NumberFormat.swift */,
+				FF7CF9A62CB4C0CB0086C3A6 /* NotificationManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -278,6 +329,41 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FF7CF9AE2CB4D1190086C3A6 /* ArchCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF7CF9AF2CB4D1190086C3A6 /* ArchCalculatorUITests.swift */,
+				FF7CF9B12CB4D1190086C3A6 /* ArchCalculatorUITestsLaunchTests.swift */,
+			);
+			path = ArchCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		FF7CF9BD2CB4D2080086C3A6 /* ArchCalculatorUITestss */ = {
+			isa = PBXGroup;
+			children = (
+				FF7CF9BE2CB4D2080086C3A6 /* ArchCalculatorUITestss.swift */,
+				FF7CF9C02CB4D2080086C3A6 /* ArchCalculatorUITestssLaunchTests.swift */,
+			);
+			path = ArchCalculatorUITestss;
+			sourceTree = "<group>";
+		};
+		FF7CF9CC2CB4D8AD0086C3A6 /* ArchCalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF7CF9CD2CB4D8AD0086C3A6 /* ArchCalculatorUITests.swift */,
+				FF7CF9CF2CB4D8AD0086C3A6 /* ArchCalculatorUITestsLaunchTests.swift */,
+			);
+			path = ArchCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		FF7CF9DB2CB4D9750086C3A6 /* ArchCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF7CF9DC2CB4D9750086C3A6 /* ArchCalculatorTests.swift */,
+			);
+			path = ArchCalculatorTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,6 +403,42 @@
 			productReference = 0669E1BB2CAFD1D700C33981 /* ArchCalculatorClip.app */;
 			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
+		FF7CF9CA2CB4D8AD0086C3A6 /* ArchCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7CF9D32CB4D8AD0086C3A6 /* Build configuration list for PBXNativeTarget "ArchCalculatorUITests" */;
+			buildPhases = (
+				FF7CF9C72CB4D8AD0086C3A6 /* Sources */,
+				FF7CF9C82CB4D8AD0086C3A6 /* Frameworks */,
+				FF7CF9C92CB4D8AD0086C3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF7CF9D22CB4D8AD0086C3A6 /* PBXTargetDependency */,
+			);
+			name = ArchCalculatorUITests;
+			productName = ArchCalculatorUITests;
+			productReference = FF7CF9CB2CB4D8AD0086C3A6 /* ArchCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		FF7CF9D92CB4D9750086C3A6 /* ArchCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7CF9E02CB4D9750086C3A6 /* Build configuration list for PBXNativeTarget "ArchCalculatorTests" */;
+			buildPhases = (
+				FF7CF9D62CB4D9750086C3A6 /* Sources */,
+				FF7CF9D72CB4D9750086C3A6 /* Frameworks */,
+				FF7CF9D82CB4D9750086C3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF7CF9DF2CB4D9750086C3A6 /* PBXTargetDependency */,
+			);
+			name = ArchCalculatorTests;
+			productName = ArchCalculatorTests;
+			productReference = FF7CF9DA2CB4D9750086C3A6 /* ArchCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -332,6 +454,14 @@
 					};
 					0669E1BA2CAFD1D700C33981 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					FF7CF9CA2CB4D8AD0086C3A6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 060384612BD7E56900BD3D5A;
+					};
+					FF7CF9D92CB4D9750086C3A6 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 060384612BD7E56900BD3D5A;
 					};
 				};
 			};
@@ -350,6 +480,8 @@
 			targets = (
 				060384612BD7E56900BD3D5A /* ArchCalculator */,
 				0669E1BA2CAFD1D700C33981 /* ArchCalculatorClip */,
+				FF7CF9CA2CB4D8AD0086C3A6 /* ArchCalculatorUITests */,
+				FF7CF9D92CB4D9750086C3A6 /* ArchCalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,6 +505,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7CF9C92CB4D8AD0086C3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7CF9D82CB4D9750086C3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -391,6 +537,7 @@
 				060A39B32BDF2F3D00121B19 /* StructurePlan.swift in Sources */,
 				06A988D62BDB819F004BBE37 /* Roof.swift in Sources */,
 				060A39B52BDF34D800121B19 /* Blocks.swift in Sources */,
+				FF7CF9A72CB4C0CB0086C3A6 /* NotificationManager.swift in Sources */,
 				06A988D42BDB542C004BBE37 /* Column.swift in Sources */,
 				060384662BD7E56900BD3D5A /* ArchCalculatorApp.swift in Sources */,
 				060A39C02BDF3A3000121B19 /* CalculateViewModel.swift in Sources */,
@@ -419,6 +566,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF7CF9C72CB4D8AD0086C3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7CF9D02CB4D8AD0086C3A6 /* ArchCalculatorUITestsLaunchTests.swift in Sources */,
+				FF7CF9CE2CB4D8AD0086C3A6 /* ArchCalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF7CF9D62CB4D9750086C3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF7CF9DD2CB4D9750086C3A6 /* ArchCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -426,6 +590,16 @@
 			isa = PBXTargetDependency;
 			target = 0669E1BA2CAFD1D700C33981 /* ArchCalculatorClip */;
 			targetProxy = 0669E1CA2CAFD1D800C33981 /* PBXContainerItemProxy */;
+		};
+		FF7CF9D22CB4D8AD0086C3A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 060384612BD7E56900BD3D5A /* ArchCalculator */;
+			targetProxy = FF7CF9D12CB4D8AD0086C3A6 /* PBXContainerItemProxy */;
+		};
+		FF7CF9DF2CB4D9750086C3A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 060384612BD7E56900BD3D5A /* ArchCalculator */;
+			targetProxy = FF7CF9DE2CB4D9750086C3A6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -562,6 +736,7 @@
 				DEVELOPMENT_TEAM = 7573MGT656;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArchCalculator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ArchCalculator;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -598,6 +773,7 @@
 				DEVELOPMENT_TEAM = 7573MGT656;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArchCalculator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ArchCalculator;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -695,6 +871,86 @@
 			};
 			name = Release;
 		};
+		FF7CF9D42CB4D8AD0086C3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JR86R49UK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CIP.ArchCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArchCalculator;
+			};
+			name = Debug;
+		};
+		FF7CF9D52CB4D8AD0086C3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JR86R49UK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CIP.ArchCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArchCalculator;
+			};
+			name = Release;
+		};
+		FF7CF9E12CB4D9750086C3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JR86R49UK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CIP.ArchCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArchCalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArchCalculator";
+			};
+			name = Debug;
+		};
+		FF7CF9E22CB4D9750086C3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3JR86R49UK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = CIP.ArchCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArchCalculator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ArchCalculator";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -721,6 +977,24 @@
 			buildConfigurations = (
 				0669E1CE2CAFD1D800C33981 /* Debug */,
 				0669E1CF2CAFD1D800C33981 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7CF9D32CB4D8AD0086C3A6 /* Build configuration list for PBXNativeTarget "ArchCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7CF9D42CB4D8AD0086C3A6 /* Debug */,
+				FF7CF9D52CB4D8AD0086C3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7CF9E02CB4D9750086C3A6 /* Build configuration list for PBXNativeTarget "ArchCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF7CF9E12CB4D9750086C3A6 /* Debug */,
+				FF7CF9E22CB4D9750086C3A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
