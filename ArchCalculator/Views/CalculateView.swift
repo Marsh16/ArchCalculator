@@ -380,7 +380,8 @@ struct CalculateView: View {
                 }
             }
         }
-    }            }
+    }
+}
 
 
 #Preview {
